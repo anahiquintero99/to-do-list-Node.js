@@ -2,8 +2,7 @@
 require('colors');
 
 const { inquirerMenu, pause } = require('./helpers/inquirer');
-
-console.clear();
+const Chores = require('./models/chores');
 
 //main
 const main = async () => {
