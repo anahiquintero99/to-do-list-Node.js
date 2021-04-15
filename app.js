@@ -1,8 +1,7 @@
 //terminal packages
 require('colors');
 
-//our packages
-const { showMenu, pause } = require('./helpers/messages');
+const { inquirerMenu } = require('./helpers/inquirer');
 
 console.clear();
 
@@ -14,9 +13,8 @@ const main = async () => {
 
   //show menu
   do {
-    opt = await showMenu();
+    opt = await inquirerMenu();
     console.log({ opt });
-    await pause();
   } while (opt !== '0');
 };
 

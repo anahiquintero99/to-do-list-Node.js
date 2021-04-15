@@ -22,6 +22,7 @@ const showMenu = () => {
 
     readline.question('Select an option: ', (opt) => {
       readline.close();
+      resolve(opt);
     });
   });
 };
