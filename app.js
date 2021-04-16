@@ -1,6 +1,7 @@
 //terminal packages
 require('colors');
 
+const { saveDB } = require('./helpers/guardarArchivo');
 const { inquirerMenu, pause, readInput } = require('./helpers/inquirer');
 const Chores = require('./models/chores');
 
@@ -24,6 +25,8 @@ const main = async () => {
         console.log(tasks.listArr);
         break;
     }
+
+    saveDB(tasks.listArr);
 
     await pause();
   } while (opt !== '0');
