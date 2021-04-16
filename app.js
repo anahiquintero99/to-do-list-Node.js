@@ -6,8 +6,6 @@ const Chores = require('./models/chores');
 
 //main
 const main = async () => {
-  console.log('Hola Mundo');
-
   let opt = '';
   const tasks = new Chores();
 
@@ -23,7 +21,7 @@ const main = async () => {
         break;
 
       case '2':
-        console.log(tasks._listado);
+        console.log(tasks.listArr);
         break;
     }
 

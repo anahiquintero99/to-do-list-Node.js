@@ -1,11 +1,21 @@
+const Homework = require('./homework');
 /**
  * _listado:
  *    {'uuid-123712-123123-2: {id:12, desc:asd, completedIn:92231} },
  */
-const Homework = require('./homework');
 
 class Chores {
   _listado = {};
+
+  get listArr() {
+    const listado = [];
+    Object.keys(this._listado).forEach((key) => {
+      const task = this._listado[key];
+      listado.push(task);
+    });
+
+    return listado;
+  }
 
   constructor() {
     this._listado = {};
